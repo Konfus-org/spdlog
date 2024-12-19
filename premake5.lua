@@ -4,8 +4,8 @@ project "spdlog"
     cppdialect "C++17"
     staticruntime "off"
 
-    targetdir ("" .. ThirdPartyOutputDir .. "/bin/%{prj.name}")
-    objdir    ("" .. ThirdPartyOutputDir .. "/obj/%{prj.name}")
+    targetdir ("" .. ThirdPartyOutputDir .. "/bin/")
+    objdir    ("" .. ThirdPartyOutputDir .. "/obj/")
 
     defines
     {
