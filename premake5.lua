@@ -4,8 +4,14 @@ project "spdlog"
     cppdialect "C++17"
     staticruntime "off"
 
-    targetdir ("" .. ThirdPartyOutputDir .. "/bin/")
-    objdir    ("" .. ThirdPartyOutputDir .. "/obj/")
+    if OutputIntermediateDir == nil or OutputTargetDir == nil then
+        targetdir ("Build/bin/%{prj.name}/")
+        objdir    ("Build/obj/%{prj.name}/")
+
+    else
+        targetdir ("../../../" .. OutputTargetDir .. "")
+        objdir    ("../../../" .. OutputIntermediateDir .. "")
+    end
 
     defines
     {
