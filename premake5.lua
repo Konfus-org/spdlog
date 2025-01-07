@@ -23,11 +23,9 @@ project "spdlog"
         "src/**.h",
         "src/**.cpp",
         "include/**.h",
-        "include/**.cpp",
-        "example/**.h",
-        "example/**.cpp"
+        "include/**.cpp"
     }
-    
+
     includedirs
     {
         "include",
