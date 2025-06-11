@@ -14,8 +14,7 @@ project "spdlog"
         "src/**.cpp",
         "include/**.h",
         "include/**.cpp",
-        "./**.md",
-        "./**.lua",
+        "./**.md"
     }
     includedirs
     {
