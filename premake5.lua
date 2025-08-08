@@ -1,12 +1,14 @@
 project "spdlog"
-    kind "StaticLib"
+    kind "SharedLib"
     language "C++"
     cppdialect "C++17"
     staticruntime "Off"
 
     defines
     {
-        "SPDLOG_COMPILED_LIB"
+        "SPDLOG_COMPILED_LIB",
+        "SPDLOG_SHARED_LIB",
+        "spdlog_EXPORTS"
     }
     files
     {
