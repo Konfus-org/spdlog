@@ -7,9 +7,9 @@
 #include <spdlog/details/null_mutex.h>
 #include <spdlog/sinks/base_sink.h>
 #ifdef _WIN32
-    #include <spdlog/details/tcp_client-windows.h>
+#include <spdlog/details/tcp_client-windows.h>
 #else
-    #include <spdlog/details/tcp_client.h>
+#include <spdlog/details/tcp_client.h>
 #endif
 
 #include <chrono>
@@ -31,7 +31,8 @@ namespace sinks {
 struct tcp_sink_config {
     std::string server_host;
     int server_port;
-    int timeout_ms = 0; // The timeout for all 3 major socket operations that is connect, send, and recv
+    int timeout_ms =
+        0;  // The timeout for all 3 major socket operations that is connect, send, and recv
     bool lazy_connect = false;  // if true connect on first log call instead of on construction
 
     tcp_sink_config(std::string host, int port)
